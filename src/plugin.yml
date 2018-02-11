@@ -1,0 +1,72 @@
+name: Arena
+version: 1.0
+description: A Arena Plugin.
+author: chitter99
+website: http://chitters.net/
+
+depend: [Vault]
+main: net.chitters.bukkit.arena.MainArena
+ 
+commands:
+  arena:
+    description: Main command.
+    aliases: [ar, a]
+    permission: arena.main
+    
+permissions:
+  arena.main:
+    default: true
+    description: Main Permissions.
+    children:
+      arena.join: true
+      arena.leave: true
+  arena.admin:
+    default: op
+    description: Admin Permissions.
+    children:
+      arena.join.other: true
+      arena.create: true
+      arena.edit: true
+      arena.edit.define: true
+      arena.edit.rule: true
+      arena.edit.addpoint: true
+      arena.edit.setpoint: true
+      arena.sign.create: true
+      arena.sign.destroy: true
+      arena.bypass.command: true
+      arena.close: true
+      arena.open: true
+      arena.access.*: true
+      arena.kit.*: true
+  arena.join:
+    description: Join command permission.
+  arena.join.other:
+    description: Force join permission.
+  arena.leave:
+    description: Leave command permission.
+  arena.create:
+    description: Grand access to creation commands.
+  arena.edit:
+    description: Edit command permission.
+  arena.edit.define:
+    description: Define command permission.
+  arena.edit.rule:
+    description: Rule command permission.
+  arena.edit.setpoint:
+    description: Sp command permission.
+  arena.edit.addpoint:
+    description: Sp command permission.
+  arena.sign.create:
+    description: Create a sign permission.
+  arena.sign.destroy:
+    description: Destroy sign permission.
+  arena.bypass.command:
+    description: Bypass ingame command blocker.
+  arena.close:
+    description: Permission to close a Arena.
+  arena.open:
+    description: Permission to open a Arena again.
+  arena.access.*:
+    description: Permission to access every single Arena.
+  arena.kit.*:
+    description: Permission to use every single Kit.
