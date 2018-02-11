@@ -1,0 +1,2 @@
+# Arena
+Spigot Arena (legacy)
